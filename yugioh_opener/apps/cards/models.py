@@ -3,7 +3,7 @@ from django.core.validators import MaxValueValidator
 
 
 class CardSet(models.Model):
-    full_name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128)
     abbr = models.CharField(max_length=4)
 
 
