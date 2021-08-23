@@ -3,16 +3,16 @@ from django.core.validators import MaxValueValidator
 
 
 class CardSet(models.Model):
-    name = models.CharField(max_length=128)
+    name = models.CharField(max_length=128, unique=True)
     abbr = models.CharField(max_length=4)
 
 
 class CardAttribute(models.Model):
-    name = models.CharField(max_length=32)
+    name = models.CharField(max_length=32, unique=True)
 
 
 class CardType(models.Model):
-    name = models.CharField(max_length=32)
+    name = models.CharField(max_length=32, unique=True)
 
 
 class Card(models.Model):
@@ -39,7 +39,7 @@ class Release(models.Model):
     card_number = models.PositiveSmallIntegerField(validators=[MaxValueValidator(999)])
     rarity = models.CharField(choices=Rarity.choices, default=Rarity.COMMON, max_length=32)
 
-    class Meta: 
+    class Meta:
         constraints = [
             models.UniqueConstraint(fields=['set_id', 'card_id'], name='unique card/set')
         ]
