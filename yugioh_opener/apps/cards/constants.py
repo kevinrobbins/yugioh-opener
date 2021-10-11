@@ -1,0 +1,39 @@
+from enum import Enum
+
+
+class CardType(Enum):
+    AQUA = 'AQUA'
+    BEAST = 'BEAST'
+    BEAST_WARRIOR = 'BEAST-WARRIOR'
+    CREATOR_GOD = 'CREATOR GOD'
+    CYBERSE = 'CYBERSE'
+    DINOSAUR = 'DINOSAUR'
+    DIVINE_BEAST = 'DIVINE-BEAST'
+    DRAGON = 'DRAGON'
+    FAIRY = 'FAIRY'
+    FIEND = 'FIEND'
+    FISH = 'FISH'
+    INSECT = 'INSECT'
+    MACHINE = 'MACHINE'
+    PLANT = 'PLANT'
+    PSYCHIC = 'PSYCHIC'
+    PYRO = 'PYRO'
+    REPTILE = 'REPTILE'
+    ROCK = 'ROCK'
+    SEA_SERPENT = 'SEA SERPENT'
+    SPELLCASTER = 'SPELLCASTER'
+    THUNDER = 'THUNDER'
+    WARRIOR = 'WARRIOR'
+    WINGED_BEAST = 'WINGED BEAST'
+    WYRM = 'WYRM'
+    ZOMBIE = 'ZOMBIE'
+
+
+class CardAttribute(Enum):
+    DARK = 'DARK'
+    DIVINE = 'DIVINE'
+    EARTH = 'EARTH'
+    FIRE = 'FIRE'
+    LIGHT = 'LIGHT'
+    WATER = 'WATER'
+    WIND = 'WIND'
