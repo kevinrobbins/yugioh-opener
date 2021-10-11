@@ -17,8 +17,8 @@ class CardType(models.Model):
 
 class Card(models.Model):
     name = models.CharField(max_length=128, unique=True)
-    attribute = models.ForeignKey(to=CardAttribute, on_delete=models.CASCADE)
-    type = models.ForeignKey(to=CardType, on_delete=models.CASCADE)
+    attribute = models.CharField(max_length=25)
+    type = models.CharField(max_length=25)
     level = models.PositiveSmallIntegerField(validators=[MaxValueValidator(12)])
     text = models.TextField(max_length=1024)
     attack = models.PositiveSmallIntegerField()
