@@ -7,14 +7,6 @@ class CardSet(models.Model):
     abbr = models.CharField(max_length=4)
 
 
-class CardAttribute(models.Model):
-    name = models.CharField(max_length=32, unique=True)
-
-
-class CardType(models.Model):
-    name = models.CharField(max_length=32, unique=True)
-
-
 class Card(models.Model):
     name = models.CharField(max_length=128, unique=True)
     attribute = models.CharField(max_length=25)
